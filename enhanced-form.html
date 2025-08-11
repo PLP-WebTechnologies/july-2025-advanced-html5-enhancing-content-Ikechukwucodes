@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form and Content Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background: #f9f9f9;
+            color: #222;
+        }
+        header, main, section, footer {
+            margin-bottom: 2rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+        th {
+            background: #eaeaea;
+        }
+        fieldset {
+            border: 1px solid #bbb;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            background: #fff;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+        input, select, textarea, button {
+            margin-top: 0.3rem;
+            padding: 0.4rem;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        .form-row {
+            margin-bottom: 1rem;
+        }
+        .media-section img, .media-section audio, .media-section video {
+            display: block;
+            margin: 1rem 0;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content & Form Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="lists">
+            <h2>Organizing Content with Lists</h2>
+            <h3>Favorite Programming Languages (Ordered List)</h3>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Go</li>
+            </ol>
+            <h3>Web Development Skills (Unordered List)</h3>
+            <ul>
+                <li>HTML5 &amp; CSS3</li>
+                <li>Responsive Design</li>
+                <li>Accessibility</li>
+                <li>Performance Optimization</li>
+            </ul>
+            <h3>Steps to Build a Web Page (Description List)</h3>
+            <dl>
+                <dt>Plan</dt>
+                <dd>Outline the structure and content.</dd>
+                <dt>Design</dt>
+                <dd>Create wireframes and choose color schemes.</dd>
+                <dt>Develop</dt>
+                <dd>Write HTML, CSS, and JavaScript code.</dd>
+                <dt>Test</dt>
+                <dd>Check for bugs and ensure accessibility.</dd>
+            </dl>
+        </section>
+        <section id="tables">
+            <h2>Tabular Data Example</h2>
+            <table>
+                <caption>Sample Course Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Course</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>09:00 - 10:30</td>
+                        <td>Web Development</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>11:00 - 12:30</td>
+                        <td>Database Design</td>
+                        <td>202</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>14:00 - 15:30</td>
+                        <td>UI/UX Basics</td>
+                        <td>303</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="media" class="media-section">
+            <h2>Media Embedding</h2>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Laptop on desk with code on screen">
+                <figcaption>Modern workspace for web development</figcaption>
+            </figure>
+            <figure>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Sample background music</figcaption>
+            </figure>
+            <figure>
+                <video controls width="400">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Sample video demonstration</figcaption>
+            </figure>
+        </section>
+        <section id="form">
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required max="2025-08-11">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" autocomplete="tel">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <div class="form-row">
+                        <label for="username">Username *</label>
+                        <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[A-Za-z0-9_]+" placeholder="Choose a username" autocomplete="username">
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters" autocomplete="new-password">
+                    </div>
+                    <div class="form-row">
+                        <label for="confirm">Confirm Password *</label>
+                        <input type="password" id="confirm" name="confirm" required minlength="8" placeholder="Re-enter your password" autocomplete="new-password">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <div class="form-row">
+                        <label for="course">Select Course *</label>
+                        <select id="course" name="course" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="webdev">Web Development</option>
+                            <option value="dbdesign">Database Design</option>
+                            <option value="uiux">UI/UX Basics</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Preferred Contact Method</label>
+                        <input type="radio" id="contact-email" name="contact_method" value="email" required>
+                        <label for="contact-email" style="display:inline;">Email</label>
+                        <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                        <label for="contact-phone" style="display:inline;">Phone</label>
+                    </div>
+                    <div class="form-row">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes"> Subscribe to newsletter
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Comments</legend>
+                    <div class="form-row">
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" rows="4" maxlength="300" placeholder="Share your thoughts..."></textarea>
+                    </div>
+                </fieldset>
+                <div class="form-row">
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 HTML5 Demo Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
